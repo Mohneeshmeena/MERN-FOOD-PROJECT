@@ -24,18 +24,14 @@ export default function MBAR() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="#">Navbar</Link>
+          <Link className="navbar-brand" to="#">Foodmeel</Link>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
               </li>
 
-              {(localStorage.getItem("authToken")) ?
-                <li className="nav-item">
-                  <Link className="nav-link  mx-3 active" aria-current="page" to="/myorder" >My Orders</Link>  {/* index.css - nav-link color white */}
-                </li> : ""}
-
+              
 
             </ul>
 
