@@ -2,5 +2,12 @@
   "dependencies": {
     "mongoose": "^7.4.0",
     "nodemon": "^3.0.1"
-  }
+  },
+
+"scripts": {
+"frontend":"cd my-app && npm start",
+"backend":"cd my-app/backend && node index.js",
+"start": "concurrently \"npm run frontend\" \"npm run backend\""
+}
+
 }

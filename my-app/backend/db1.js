@@ -13,7 +13,7 @@ const mongoDB = () => {
     );
     DynamicModel.find({})
         .then((Data) => {
-            // Data retrieved from the collection
+            
             global.food_items = Data;
 
         })
@@ -41,6 +41,35 @@ const mongoDB = () => {
         });
 
 }
+
+
+
+
+const DynamicModel2 = mongoose.model('dynamic2', new mongoose.Schema({},
+    { strict: false, collection: 'orders' })
+);
+DynamicModel2.find({})
+    .then((ordersData) => {
+        
+        global.foodordersdata = ordersData;
+     
+
+    })
+    .catch((err) => {
+        console.error('Error retrieving data', err);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 module.exports = mongoDB();

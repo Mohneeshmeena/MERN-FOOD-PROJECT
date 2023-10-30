@@ -19,7 +19,7 @@ router.post("/orderData", async (req, res) => {
             })
         } catch (error) {
             console.log(error.message)
-            res.send( error.message)
+            res.send(error.message)
         }
 
     }
@@ -47,11 +47,11 @@ router.post("/orderData", async (req, res) => {
 router.post('/myorderData', async (req, res) => {
     try {
         console.log(req.body.email)
-        let eId1 = await Order.findOne({ 'email': req.body.email })
-        //console.log(eId)
-        res.json({orderData:eId1})
+        let odata = await Order.findOne({ 'email': req.body.email })
+        res.json(odata)
+
     } catch (error) {
-        res.send("Error",error.message)
+        res.send("Error", error.message)
     }
 
 

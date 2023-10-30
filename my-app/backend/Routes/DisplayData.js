@@ -13,4 +13,22 @@ router.post("/foodData", (req, res) => {
     }
 })
 
+
+router.post("/adminData", (req, res) => {
+    try {
+        res.send(global.foodordersdata)
+
+    } catch (error) {
+        console.log(error.message);
+        res.send("server error");
+
+    }
+})
+
+
+
+
+
+
+
 module.exports = router; 

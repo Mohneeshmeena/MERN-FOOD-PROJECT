@@ -45,6 +45,7 @@ export default function CARDS(props) {
       else if (food.size !== size) {
         await dispatch({ type: "ADD", id: foodItem._id, name: foodItem.name, price: finalPrice, qty: qty, size: size, img: foodItem.img })
         console.log("Size different so simply ADD one more to the list")
+        
         return
       }
       return
@@ -58,13 +59,13 @@ export default function CARDS(props) {
 
 
   return (
-    <div>
-      <div className="card mt-3" style={{ "width": "18rem", "maxHeight": "360px" }}>
-        <img src={foodItem.img} className="card-img-top" alt="..." style={{ height: "120px", objectFit: "fill" }} />
+    <div >
+      <div className="card mt-3 mb-3" style={{ "width": "14rem", "maxHeight": "350px", }}>
+        <img src={foodItem.img} className="card-img-top" alt="..." style={{ height: "150px", objectFit: "fill" }} />
         <div className="card-body">
           <p className="card-text">{foodItem.name}</p>
-          <div className='container w-100'>
-            <select className='m-2 h-100 bg-success' onChange={(e) => { setQty(e.target.value) }}>
+          <div className='container1 w-100 '>
+            <select className='m-1 h-25 bg-success' onChange={(e) => { setQty(e.target.value) }}>
               {Array.from(Array(6), (e, i) => {
                 return (
                   <option key={i + 1} value={i + 1}>{i + 1}</option>

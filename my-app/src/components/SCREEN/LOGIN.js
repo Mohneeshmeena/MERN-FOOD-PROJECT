@@ -60,6 +60,8 @@ export default function LOGIN() {
 
           <button type="submit" className="m-3 btn btn-success">Submit</button>
           <Link to="/createuser" className="m-3 btn btn-danger" >I am a new user</Link>
+          <Link to="/adminpage" className="m-3 btn btn-danger" >Enter as Admin</Link>
+
         </form>
       </div>
     </>
