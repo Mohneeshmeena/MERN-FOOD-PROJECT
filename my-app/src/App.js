@@ -23,8 +23,8 @@ function App() {
       <Router>
         <div>
           <Routes>
-            <Route exact path='/' element={<HOME></HOME>} />
-            <Route exact path='/LOGIN' element={<LOGIN></LOGIN>} />
+            <Route exact path='/' element={<LOGIN></LOGIN>} />
+            <Route exact path='/Home' element={<HOME></HOME>} />
             <Route exact path='/createuser' element={<SIGN></SIGN>} />
             <Route exact path='/cart' element={<Cart></Cart>} />
             <Route exact path='/myorder' element={<MyOrder></MyOrder>} />

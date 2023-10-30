@@ -27,7 +27,7 @@ export default function LOGIN() {
       localStorage.setItem('userEmail', credentials.email)
       localStorage.setItem("authToken", json.authToken)
       console.log(localStorage.getItem("authToken"))
-      navigate("/");
+      navigate("/Home");
     }
     else {
       alert("Enter Valid Credentials")
