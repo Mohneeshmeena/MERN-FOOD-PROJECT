@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useCart } from './ContextReducer';
 import Cart from './SCREEN/Cart';
 import Modal from './Modal';
+import './SCREEN/MBAR.css'
 
 export default function MBAR() {
 
@@ -24,15 +25,15 @@ export default function MBAR() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="#">Foodmeel</Link>
+          <Link className="navbar-brand" to="#"><h1 className='foodmeallogo'>Foodmeel</h1></Link>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/Home">Home</Link>
+                <Link className="nav-link active" aria-current="page" to="/Home"><h6 className='navbartext'>Home</h6></Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/myorder">MyOrder</Link>
+                <Link className="nav-link active" aria-current="page" to="/myorder"><h6 className='navbartext'>MyOrder</h6></Link>
               </li>
 
 

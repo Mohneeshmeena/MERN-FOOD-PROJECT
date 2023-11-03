@@ -2,3 +2,25 @@
 {
     margin-top:100px;
 }
+.allorderemail{
+    font-size:16px;
+    margin-left:10px;
+    text-decoration:underline;
+    text-transform: capitalize;
+}
+.TABLETEXT{
+    font-size:20px;
+    margin-left:0px;
+    text-transform: uppercase;
+    font-family: 'VT323', monospace;
+  
+}
+
+.TABLETEXT1{
+    font-size:20px;
+    margin-left:4px;
+    text-transform: capitalize;
+
+    font-family: 'VT323', monospace;
+    
+}

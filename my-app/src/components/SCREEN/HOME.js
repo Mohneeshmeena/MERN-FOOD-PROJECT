@@ -4,7 +4,7 @@ import Navbar from '../MBAR'
 import Card from '../CARDS'
 // import Carousel from '../components/Carousel'
 import Footer from '../Footer'
-
+import './HOME.css'
 export default function HOME() {
   const [foodCat, setFoodCat] = useState([])
   const [foodItems, setFoodItems] = useState([])
@@ -30,11 +30,11 @@ export default function HOME() {
   }, [])
 
   return (
-    <div >
+    <div className='Homepagedesign' >
       <div>
         <Navbar />
       </div>
-      <div>
+      <div >
         <div id="carouselExampleFade" className="carousel slide carousel-fade " data-bs-ride="carousel">
 
           <div className="carousel-inner " id='carousel'>
@@ -64,6 +64,9 @@ export default function HOME() {
           </button>
         </div>
       </div>
+
+<div className='welcomeslogan'><h1 className='slogantitle'>Welcome to Portal of Food.</h1></div>
+
       <div className='container'>
         {
           foodCat !== []

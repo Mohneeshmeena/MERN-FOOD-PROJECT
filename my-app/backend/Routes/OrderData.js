@@ -46,7 +46,6 @@ router.post("/orderData", async (req, res) => {
 
 router.post('/myorderData', async (req, res) => {
     try {
-        console.log(req.body.email)
         let odata = await Order.findOne({ 'email': req.body.email })
         res.json(odata)
 

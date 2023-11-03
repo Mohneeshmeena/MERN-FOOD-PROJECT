@@ -4,7 +4,7 @@ import { useDispatchCart } from './ContextReducer';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useRef } from 'react';
-
+import './CARDS.css'
 export default function CARDS(props) {
   let options = props.options;
   let foodItem = props.Item;
@@ -45,7 +45,7 @@ export default function CARDS(props) {
       else if (food.size !== size) {
         await dispatch({ type: "ADD", id: foodItem._id, name: foodItem.name, price: finalPrice, qty: qty, size: size, img: foodItem.img })
         console.log("Size different so simply ADD one more to the list")
-        
+
         return
       }
       return
@@ -60,12 +60,12 @@ export default function CARDS(props) {
 
   return (
     <div >
-      <div className="card mt-3 mb-3" style={{ "width": "14rem", "maxHeight": "350px", }}>
+      <div className="FOODCARD" style={{ "width": "14rem", "maxHeight": "350px", }}>
         <img src={foodItem.img} className="card-img-top" alt="..." style={{ height: "150px", objectFit: "fill" }} />
         <div className="card-body">
-          <p className="card-text">{foodItem.name}</p>
+          <p className="card-text"><h6 className='fooditemname'>{foodItem.name}</h6></p>
           <div className='container1 w-100 '>
-            <select className='m-1 h-25 bg-success' onChange={(e) => { setQty(e.target.value) }}>
+            <select className='options' onChange={(e) => { setQty(e.target.value) }}>
               {Array.from(Array(6), (e, i) => {
                 return (
                   <option key={i + 1} value={i + 1}>{i + 1}</option>
@@ -73,17 +73,17 @@ export default function CARDS(props) {
                 )
               })}
             </select>
-            <select className='m-2 h-100 bg-success rounded' ref={priceRef} onChange={(e) => { setSize(e.target.value) }}>
+            <select className='options' ref={priceRef} onChange={(e) => { setSize(e.target.value) }}>
               {priceOptions.map((data) => {
 
                 return <option key={data} value={data}>{data}</option>
               })}
             </select>
-            <div className='d-inline h-100 fs-5'>
+            <div className='pricetext'>
               Rs{finalPrice}/-
             </div>
 
-            <button className={`btn btn-success justify-center ms-2 `} onClick={handleAddToCart}>Add to Cart</button>
+            <button className={`options `} onClick={handleAddToCart}>Add to Cart</button>
 
           </div>
         </div>

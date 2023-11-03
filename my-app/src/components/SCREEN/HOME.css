@@ -1,0 +1,29 @@
+.Homepagedesign {
+  border: 7px inset black;
+  padding:10px;
+  border-radius:5px;
+  border-top-style: dotted;
+  border-bottom-style: solid;
+  border-left-style: outset;
+  border-right-style: inset;
+  border-top-color: red;
+  border-bottom-color: black;
+  border-left-color: orange;
+  border-right-color: orange;
+  
+}
+.welcomeslogan{
+  margin-top:5%;
+  color:orange;
+  text-align:center;
+
+  text-decoration:underline;
+  text-decoration-color: red;
+  text-decoration-style: double;
+  text-decoration-thickness: 1px;
+  text-transform: capitalize;
+  word-spacing: 1px;
+  letter-spacing:2px;
+
+  font-family: 'Poppins', sans-serif;
+}

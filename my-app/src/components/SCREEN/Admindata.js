@@ -42,7 +42,7 @@ const Admindata = () => {
                     return (
                         <div>
                             <table className='mtable' style={{width:"100%"}}>
-                                <th className='tabledata'><h7 className='TABLETEXT'>{data.email}</h7></th>
+                                <th className='tabledata'><h7 className='allorderemail'>{data.email}</h7></th>
                                 <td>
                                     {data !== [] ? <div>{data.order_data && data.order_data.map(data1 => {
                                         return (
@@ -51,7 +51,7 @@ const Admindata = () => {
                                                     return (
                                                         <div>
                                                             {data2.order_date !== [] ? <th className='tabledata'><h7 className='TABLETEXT'>{data2.order_date}</h7></th> :"no date"}
-                                                            {data2.name !== [] ? <td className='tabledata'><h7 className='TABLETEXT'>{data2.name}</h7></td> :"no name"}
+                                                            {data2.name !== [] ? <td className='tabledata'><h7 className='TABLETEXT1'>{data2.name}</h7></td> :"no name"}
                                                             {data2.qty !== [] ? <td className='tabledata'><h7 className='TABLETEXT'>{data2.qty}</h7></td> :"no qty"}
                                                             {data2.size !== [] ? <td className='tabledata'><h7 className='TABLETEXT'>{data2.size}</h7></td> :"no size"}
                                                             {data2.price !== [] ? <td className='tabledata'><h7 className='TABLETEXT'>{data2.price}</h7></td> :"no price"}

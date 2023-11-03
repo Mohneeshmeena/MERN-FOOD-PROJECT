@@ -41,6 +41,10 @@ export default function MyOrder() {
                 <Navbar />
             </div>
 
+            <div className='slogan'><h1 className='slogantitle'>Thank You For Orders.</h1></div>
+            <div className='slogan1'><h1 className='slogantitle'>We respect your orders.</h1></div>
+            <div className='sloganimgbackground' ><img className='ordersloganimage' src='https://source.unsplash.com/random/900x700/?sweets'></img></div>
+
 
             <div className='container'>
 
@@ -50,26 +54,26 @@ export default function MyOrder() {
                         data !== [] ? <div>{data.map(data1 => {
                             return (
                                 <div>
-                                    <table className='mtable' style={{width:"100%"}}>
+                                    <table className='mtable' style={{ width: "100%" }}>
                                         <tr>
                                             <th className='heading w-25'>
                                                 {data1.order_date}
                                             </th>
                                             <td className='tableimg'>
-                                                <img src={data1.img} alt='Thank You for Order' style={{ height: "150px",width: "150px", objectFit: "fill" }}></img>
+                                                <img src={data1.img} alt='Thank You for Order' style={{ height: "150px", width: "150px", objectFit: "fill" }}></img>
                                             </td>
 
                                             <td className='tabledata'>
                                                 <h7 className='tabletext'>{data1.name}</h7>
                                             </td>
                                             <td className='tabledata'>
-                                            <h7 className='tabletext'>  {data1.qty}</h7>
+                                                <h7 className='tabletext'>  {data1.qty}</h7>
                                             </td>
                                             <td className='tabledata'>
-                                            <h7 className='tabletext'>  {data1.size}</h7>
+                                                <h7 className='tabletext'>  {data1.size}</h7>
                                             </td>
                                             <td className='tabledata'>
-                                            <h7 className='tabletext'> {data1.price}</h7>
+                                                <h7 className='tabletext'> {data1.price}</h7>
                                             </td>
                                         </tr>
                                     </table>

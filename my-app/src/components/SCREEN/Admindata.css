@@ -1,13 +1,13 @@
-.mtable {
-    width: 100%;
-    border: 10px solid black;
-    background-color: black;
-  }
-  
-  .tabledata {
-    width: 30%;
-  }
-  
-  .TABLETEXT{
-    color:white;
-  }
+
+.tabledata {
+
+  border: 1px solid white;
+  width: 20rem;
+}
+
+.TABLETEXT {
+  color: black;
+  font-family: "Lucida Console", "Cursive", monospace;
+  font-weight: lighter;
+  font-size: 15px;
+}
